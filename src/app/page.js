@@ -18,7 +18,7 @@ export default function Home() {
           console.error("Error al obtener productos:", err);
           setLoading(false);
         });
-    }, 1000); // 1 segundo de delay
+    }, 1000); // 1 segundo de delay ccc
 
     return () => clearTimeout(timer);
   }, []);
