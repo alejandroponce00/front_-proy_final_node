@@ -1,15 +1,18 @@
-'use client';
-
 import { useEffect, useState } from "react";
-const API_URL = process.env.NEXT_PUBLIC_API_URL;
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://proy-final-alejandroponce00-alejandros-projects-30c19e38.vercel.app/api';
 export default function Home() {
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
   
   useEffect(() => {
     const timer = setTimeout(() => {
-      fetch(`${API_URL}/products`)
-        .then((res) => res.json())
+      fetch(`${API_URL}/products`)  // La URL ya incluye /api, solo necesitamos agregar /products
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error('Error en la solicitud');
+          }
+          return res.json();
+        })
         .then((data) => {
           setProductos(data.payload || []);
           setLoading(false);
@@ -18,7 +21,8 @@ export default function Home() {
           console.error("Error al obtener productos:", err);
           setLoading(false);
         });
-    }, 1000); // 1 segundo de delay ccc
+    }, 1000);
+
 
     return () => clearTimeout(timer);
   }, []);
