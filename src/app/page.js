@@ -1,3 +1,4 @@
+'use client';
 import { useEffect, useState } from "react";
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://proy-final-alejandroponce00-alejandros-projects-30c19e38.vercel.app/api';
 export default function Home() {
