@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from "react";
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://proy-final-alejandroponce00-alejandros-projects-30c19e38.vercel.app/api';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
 export default function Home() {
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
