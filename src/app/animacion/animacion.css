@@ -1,0 +1,19 @@
+.logo.react {
+  width: 50%;
+  height: 50%;
+  display: block;   /* para que tome margin auto */
+  margin: 0 auto;  /* lo centra horizontal */
+}
+.boton {
+  padding: 10px 20px;
+  border: 2px solid #4f46e5; /* color violeta */
+  border-radius: 8px;        /* bordes redondeados */
+  background-color: white;
+  color: #4f46e5;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background-color: #4f46e5;
+  color: white;
+}

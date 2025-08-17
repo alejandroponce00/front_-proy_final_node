@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useState } from "react";
+import Animacion from "./animacion/page";
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
 export default function Home() {
   const [productos, setProductos] = useState([]);
@@ -29,6 +30,7 @@ export default function Home() {
   }, []);
 
   return (
+   
     <main className="min-h-screen bg-gray-50 text-gray-900 flex flex-col items-center px-4 py-10">
       <h1 className="text-4xl font-semibold mb-6">🛒 Productos</h1>
 
@@ -65,6 +67,7 @@ export default function Home() {
               ))}
             </tbody>
           </table>
+           < Animacion />
         </div>
       )}
        <footer className="mt-15">✨ Autor
