@@ -1,3 +1,4 @@
+"use client"
 import { animate, createScope, createSpring, createDraggable } from 'animejs';
 import { useEffect, useRef, useState } from 'react';
 import Image from "next/image";
